@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Merry Christmas Coders.tokyo </title>
+  <link rel="shortcut icon" href='https://coders.tokyo/images/favicon.png'>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section id="snow"></section>
+<iframe src='audio/121.mp3' type='audio/mp3' width="1" height="0" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</body>
+<script language=javascript> // đoạn code chạy title 
+	 alert(document.title);
+     title_tmp1 = document.title
+        if (title_tmp1.indexOf(">>") != -1) {
+            title_tmp2 = title_tmp1.split(">>");
+            title_last = "*~*" + title_tmp2[1];
+            title_last = title_last + "*~*" + title_tmp2[2];
+        } else {
+
+            if (title_tmp1.indexOf("*~*") != -1) {
+                title_tmp2 = title_tmp1.split("*~*");
+                title_last = "*~*" + title_tmp2[1];
+                if (title_last == "*~*") {
+                    title_last = "*~*"
+                };
+                if (title_last == "*~*") {
+                    title_last = "*~*"
+                };
+            } else {
+                title_last = "Coders.tokyo"
+            }
+        }
+        title_new = "" + title_last + ""
+        step = 0
+        function flash_title() {
+            step++
+            if (step == 8) {
+                step = 1
+            }
+            if (step == 1) {
+                document.title = '|----♥' + title_new + '♥----|'
+            }
+            if (step == 2) {
+                document.title = '|---♥-' + title_new + '-♥---|'
+            }
+            if (step == 3) {
+                document.title = '|--♥--' + title_new + '--♥--|'
+            }
+            if (step == 4) {
+                document.title = '|-♥---' + title_new + '---♥-|'
+            }
+            if (step == 5) {
+                document.title = '|♥----' + title_new + '----♥|'
+            }
+            if (step == 6) {
+                document.title = '|-♥---' + title_new + '---♥-|'
+            }
+            if (step == 7) {
+                document.title = '|--♥--' + title_new + '--♥--|'
+            }
+            if (step == 8) {
+                document.title = '|---♥-' + title_new + '-♥---|'
+            }
+            if (step == 9) {
+                document.title = '|----♥' + title_new + '♥----|'
+            }
+            setTimeout("flash_title()", 180);
+        }
+        flash_title()
+    </script>
+</html>
